@@ -1,0 +1,26 @@
+{
+  "name": "tweets",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "nodemon ./bin/www",
+    "db:drop": "dropdb -e awesome-tweets",
+    "db:create": "createdb -e awesome-tweets",
+    "db:reset": "yarn db:drop && yarn db:create",
+    "db:migrate": "node db/migrate.js",
+    "db:seed": "node db/seed.js"
+  },
+  "dependencies": {
+    "body-parser": "~1.16.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.0",
+    "express": "~4.14.1",
+    "faker": "^4.1.0",
+    "morgan": "~1.7.0",
+    "pg-promise": "^5.6.4",
+    "pug": "~2.0.0-beta10",
+    "serve-favicon": "~2.3.2"
+  },
+  "devDependencies":{
+    "nodemon": "^1.11.0"
+  }
+}

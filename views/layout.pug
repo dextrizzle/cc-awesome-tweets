@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title= 'Awesome Tweets'
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='/javascripts/jquery-3.2.0.min.js')
+    script(src='/javascripts/bootstrap.min.js')
+    script(src='/javascripts/main.js')
+  body
+    nav(class='navbar navbar-inverse')
+      .container-fluid
+        .navbar-header
+          button(type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1' aria-expanded='false')
+            span(class='sr-only') Toggle nav
+            span(class='icon-bar')
+            span(class='icon-bar')
+            span(class='icon-bar')
+          a(class='navbar-brand', href='/')
+            img(src='images/coollogo_sm.png' width='50px' style='position:absolute;left:10px;top:5px')
+        div(class='collapse navbar-collapse' id='bs-example-navbar-collapse-1')
+          ul(class='nav navbar-nav navbar-right')
+            li
+              a(href='/') Home
+            li
+              a(href='/users') Dashboard
+    block content

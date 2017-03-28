@@ -1,0 +1,54 @@
+body{
+  background-color: black;
+}
+.navbar {
+  margin-bottom: 0px;
+  z-index: 2
+}
+.splash {
+  background-image: url('../images/large.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color:grey;
+  height:100vh;
+  z-index: -2;
+}
+.splash-text {
+  position: absolute;
+  width: 100%;
+  top: 15vh;
+  padding-right: 30px;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  text-shadow: 4px 4px 5px rgba(110, 150, 150, .7);
+  z-index: 0;
+}
+.tweet-form{
+  margin-top: 20px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background-color: #222222;
+  min-height: 200px;
+  border-radius: 5px;
+}
+@media screen and (min-width: 1px) {
+    .splash-text img{
+      width:300px;
+    }
+}
+@media screen and (min-width: 480px) {
+    .splash-text img{
+      width:400px;
+    }
+}
+@media screen and (min-width: 780px) {
+    .splash-text img{
+      width:600px;
+    }
+}
+@media screen and (min-width: 980px) {
+    .splash-text img{
+      width:600px;
+    }
+}

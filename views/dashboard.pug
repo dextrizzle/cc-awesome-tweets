@@ -1,0 +1,50 @@
+extends layout
+
+block content
+  .container-fluid
+    div(class='hidden-sm hidden-xs col-md-4 sidebar' style='margin-top:20px;')
+      .well
+        div
+          img(src='images/tommy.jpg')
+          div(style='position:absolute;top:0;left:150px;')
+            h3 Tommy Gunz
+            p @comtruise
+          div
+            br
+            h4 followers: 94
+            h4 following: 28
+            h5 posts: 13
+      h3(style='color:#cccccc') Trending on AweTweets
+      .well
+        div
+          a(href='#') #bablbalabla
+          br
+          a(href='#') #coolthings
+          br
+          a(href='#') #hottech
+          br
+          a(href='#') #droneaccessories
+          br
+          a(href='#') #web5.0
+          br
+    div(class='col-xs-12 col-md-8 tweet-form' style='margin-bottom:20px;')
+      form(method='post')
+        div(style='margin-bottom:10px;')
+          input(placeholder='username' name='username' value=`${username}` )
+        .field
+          textarea(name='tweet' rows='5' maxlength='255' style='width:100%;margin-bottom:5px;')
+        div(class='actions' style='margin-bottom:10px;')
+          input(type='submit' disabled='disabled')
+      hr
+
+      if posts
+        each index in posts
+          .well
+            .container-fluid(style='padding-left:0')
+              div(class='hidden-sm hidden-xs col-md-2')
+                img(src='images/tommy.jpg')
+              div(class='col-xs-12 col-md-10' style='padding-left:20px;')
+                h4(style='color:blue;') #{index.username}:
+                p #{index.content}
+                p(style='text-align:right;')
+                  em #{index.time}
